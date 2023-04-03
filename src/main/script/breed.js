@@ -105,10 +105,11 @@ async function readText(event) {
 
   // khi user chọn file trước, nút Import sẽ hiển thị bảng danh sách pet
   btnImport.addEventListener("click", (e) => {
-    //let breed = JSON.parse(getFromStorage(KEY_BREED));
-    renderTableData(breedArr);
+    let breed = JSON.parse(getFromStorage(KEY_BREED));
+    renderTableData(breed);
   });
   saveToStorage(KEY_BREED, breedArr);
 }
+console.log(breedArr);
 // khi mở lại ứng dụng thì hiển thị dữ liệu breed
 renderTableData(breedArr);
